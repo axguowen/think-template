@@ -96,7 +96,7 @@ class Template
      * @access public
      * @param  array $config
      */
-    public function __construct($config = [])
+    public function __construct(array $config = [])
     {
         $this->config = array_merge($this->config, $config);
 
@@ -121,7 +121,7 @@ class Template
      * @param  array $vars 模板变量
      * @return $this
      */
-    public function assign($vars = [])
+    public function assign(array $vars = [])
     {
         $this->data = array_merge($this->data, $vars);
         return $this;
@@ -155,7 +155,7 @@ class Template
      * @param  array $config
      * @return $this
      */
-    public function config($config)
+    public function config(array $config)
     {
         $this->config = array_merge($this->config, $config);
         return $this;
@@ -217,7 +217,7 @@ class Template
      * @param  array  $vars 模板变量
      * @return void
      */
-    public function fetch($template, $vars = [])
+    public function fetch($template, array $vars = [])
     {
         if ($vars) {
             $this->data = array_merge($this->data, $vars);
@@ -288,7 +288,7 @@ class Template
      * @param  array  $vars 模板变量
      * @return void
      */
-    public function display($content, $vars = [])
+    public function display($content, array $vars = [])
     {
         if ($vars) {
             $this->data = array_merge($this->data, $vars);
@@ -1127,7 +1127,7 @@ class Template
      * @param  array $vars 变量数组
      * @return string
      */
-    public function parseRequestVar($vars)
+    public function parseRequestVar(array $vars)
     {
         $type  = strtoupper(trim(array_shift($vars)));
         $param = implode('.', $vars);
@@ -1168,7 +1168,7 @@ class Template
      * @param  array $vars 变量数组
      * @return string
      */
-    public function parseThinkVar($vars)
+    public function parseThinkVar(array $vars)
     {
         $type  = strtoupper(trim(array_shift($vars)));
         $param = implode('.', $vars);

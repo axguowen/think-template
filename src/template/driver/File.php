@@ -46,7 +46,7 @@ class File
      * @param  array   $vars 变量数组
      * @return void
      */
-    public function read($cacheFile, $vars = [])
+    public function read($cacheFile, array $vars = [])
     {
         $this->cacheFile = $cacheFile;
 
